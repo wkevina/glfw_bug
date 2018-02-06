@@ -25,8 +25,18 @@ project(glfw_bug)
 set(HUNTER_BUILD_SHARED_LIBS ON)
 set(BUILD_SHARED_LIBS ON)
 
+hunter_add_package(GTest)
+hunter_add_package(glew)
 hunter_add_package(glfw)
+hunter_add_package(glm)
+hunter_add_package(PNG)
+hunter_add_package(Box2D)
 
+find_package(GTest CONFIG REQUIRED)
+find_package(glew CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
+find_package(glm CONFIG REQUIRED)
+find_package(PNG CONFIG REQUIRED)
+find_package(Box2D CONFIG REQUIRED)
 
 add_subdirectory(src)
