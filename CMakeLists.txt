@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
 cmake_policy(SET CMP0054 NEW)
 cmake_policy(SET CMP0042 NEW)
 
@@ -30,13 +32,14 @@ hunter_add_package(glew)
 hunter_add_package(glfw)
 hunter_add_package(glm)
 hunter_add_package(PNG)
-hunter_add_package(Box2D)
+#hunter_add_package(Box2D)
 
 find_package(GTest CONFIG REQUIRED)
 find_package(glew CONFIG REQUIRED)
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(PNG CONFIG REQUIRED)
-find_package(Box2D CONFIG REQUIRED)
+#find_package(Box2D CONFIG REQUIRED)
 
 add_subdirectory(src)
+#add_subdirectory(pixel)
